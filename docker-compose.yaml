@@ -1,0 +1,15 @@
+version: "1"
+
+# networks:
+#   qrcode:
+
+volumes:
+  images:
+
+services:
+  qrcode:
+    image: sr278/qrcodev1:latest
+    volumes:
+      - ./images:/app/images
+    environment:
+      - QR_CODE_DEFAULT_URL=https://hub.docker.com/repository/docker/sr278/qrcodev1
